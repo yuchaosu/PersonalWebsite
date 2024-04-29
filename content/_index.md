@@ -65,7 +65,7 @@ sections:
         - title: Research Assitant
           company: College of William & Mary
           company_url: 'www.wm.edu'
-          company_logo: cwm.png
+          company_logo: cwm
           location: Remote
           date_start: '2023-08-11'
           date_end: ''
