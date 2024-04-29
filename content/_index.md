@@ -81,7 +81,7 @@ sections:
           company_logo: EA-Logo
           location: Orlando, Florida
           date_start: '2022-09-01'
-          date_end: '2022-12-1'
+          date_end: '2022-12-01'
           description: Taught electronic engineering and researched semiconductor physics.
     design:
       columns: '2'
