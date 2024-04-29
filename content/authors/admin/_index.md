@@ -120,4 +120,4 @@ social:
 highlight_name: true
 ---
 
-My name is Yuchao Su, a Ph.D. student at NCSU. Before joining the NCSU, I was fortunate to work with Prof. Yifan Sun at College of Williams and Mary, Prof. Quansheng Yang at Southeast University.
+My name is Yuchao Su, a Ph.D. student at NCSU. Before joining the NCSU, I was fortunate to work with Prof. Yifan Sun at College of William & Mary, Prof. Quansheng Yang at Southeast University.

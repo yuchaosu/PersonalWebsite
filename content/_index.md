@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ''
-date: 2022-10-24
+title: 'Under Construction'
+date: 2024-5-1
 type: landing
 
 sections:
@@ -62,12 +62,12 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+        - title: Research Assitant
+          company: College of William & Mary
+          company_url: 'www.wm.edu'
+          company_logo: cwm
+          location: Remote
+          date_start: '2023-08-11'
           date_end: ''
           description: |2-
               Responsibilities include:
@@ -75,13 +75,13 @@ sections:
               * Analysing
               * Modelling
               * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
+        - title: Software Engineer Intern
+          company: Electronic Arts
+          company_url: 'www.ea.com'
+          company_logo: EA-Logo
+          location: Orlando, Florida
+          date_start: '2022-09-01'
+          date_end: '2022-12-1'
           description: Taught electronic engineering and researched semiconductor physics.
     design:
       columns: '2'
