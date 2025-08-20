@@ -1,0 +1,9 @@
+<span id="views"></span>
+<script>
+  const key = encodeURIComponent(location.pathname);
+  fetch(`https://yuchaosu.goatcounter.com/counter/${key}.json`)
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('views').textContent = d.count;
+    });
+</script>

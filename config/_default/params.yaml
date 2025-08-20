@@ -22,6 +22,8 @@ marketing:
     plausible: ''
     fathom: ''
     pirsch: ''
+    goatcounter:
+      site: yuchaosu.goatcounter.com
   verification:
     google: ''
     baidu: ''
@@ -35,12 +37,12 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Your Name"
+      text: "Yuchao Su"
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Yuchao Su. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
