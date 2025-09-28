@@ -37,6 +37,8 @@ tags:
 - Planning
 - Optimization
 
+# Display this page in the Featured widget?
+featured: true
 
 hugoblox:
   ids:
