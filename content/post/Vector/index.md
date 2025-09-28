@@ -1,6 +1,6 @@
 ---
 title: 矢量（Vector）
-summary: 一些帮助更好理解矢量的想法。 Some thoughts to better understand vector.
+summary: 一些更好理解矢量的想法。 Some thoughts to better understand vector.
 date: 2025-09-27
 math: true
 authors:
@@ -13,7 +13,6 @@ image:
   caption: 'Vector'
 ---
 
-# 矢量（Vector）
 *以下文字叙述仅适用于高中及以下阶段，不适用于高等教育。*
 
 *The following only works in K12 level not for higher education.*
