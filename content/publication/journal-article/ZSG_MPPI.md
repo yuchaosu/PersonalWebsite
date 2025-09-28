@@ -1,4 +1,3 @@
-
 ---
 title: "ZSG-MPPI: Robust Model-Predictive Path-Integral Method for Disturbance Handling"
 authors:
