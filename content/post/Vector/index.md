@@ -4,17 +4,18 @@ summary: 一些帮助更好理解矢量的想法。 Some thoughts to better unde
 date: 2025-09-27
 math: true
 authors:
-  - Yuchao Su
+  - admin
 tags:
   - Teaching
   - Vector
-  - Markdown
+  - Thinking
 image:
-  caption: 'Embed rich media such as videos and LaTeX math'
+  caption: 'Vector'
 ---
 
 # 矢量（Vector）
 *以下文字叙述仅适用于高中及以下阶段，不适用于高等教育。*
+
 *The following only works in K12 level not for higher education.*
 
 最近在使用梯度的时候，我发现自己其实并不真正理解矢量的概念。因此，我想写下自己对如何更好理解矢量的思考。
