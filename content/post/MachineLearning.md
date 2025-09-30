@@ -56,11 +56,11 @@ $$ ||\mathbf{x}||_\infty = \max_{1 \leq i \leq n} |x_i| $$
 
 ### Probability
 
-**Independent events:**
+#### Independent events:
 $$ P(A \cap B) = P(A)P(B) $$
 $$ P(A \cup B) = P(A) + P(B) - P(A)P(B) $$
 
-**Conditional Probability:**
+#### Conditional Probability:
 $$ P(A \cap B) = P(A|B)P(B) = P(B|A)P(A) $$
 $$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
 
@@ -68,7 +68,7 @@ Check if two events are independent:
 $$ P(A|B) = P(A) $$ or
 $$ P(B|A) = P(B) $$
 
-**Bayes' Theorem:**
+#### Bayes' Theorem:
 
 - Prior probability vs Posterior probability:
 Prior probability is the initial probability of an event before new evidence is considered. Posterior probability is the updated probability of an event after considering new evidence.
@@ -81,7 +81,7 @@ $$ P(A_i|B) = \frac{P(B|A_i)P(A_i)}{P(B)} = \frac{P(B|A_i)P(A_i)}{\sum_{j} P(B|A
 The usage of Bayes' theorem is to update the probability of an event based on new evidence. We can use the posterior probability to predict the likelihood of an event occurring given the new evidence.
 Given the machine learning context, we can use the dataset as "B", and the model parameters as "A". Then we can use Bayes' theorem to update the model parameters based on the dataset.
 
-## Likelihood function
+#### Likelihood function
 The likelihood function is a fundamental concept in statistics and machine learning. It is used to estimate the parameters of a statistical model given observed data. The likelihood function measures how likely it is to observe the given data for different values of the model parameters. On the other hand, the probability function measures the likelihood of observing a specific outcome given a set of parameters.
 
 In more common terms, the likelihood function is a function of the parameters of a statistical model, given the observed data. The input to the likelihood function is the model parameters, and the output is the likelihood of observing the data given those parameters.
@@ -100,6 +100,6 @@ To simplify the computation, we often work with the log-likelihood function, whi
 $$ \ell(\theta | D) = \log L(\theta | D) = \sum_{i=1}^{n} \log P(x_i | \theta) $$
 Maximizing the log-likelihood is equivalent to maximizing the likelihood due to the monotonic nature of the logarithm. It is often easier to work with the log-likelihood due to its additive properties.
 
-## Maximum Likelihood Estimation (MLE)
+#### Maximum Likelihood Estimation (MLE)
 Maximum Likelihood Estimation (MLE) is a method used to estimate the parameters of a statistical model by maximizing the likelihood function. The goal of MLE is to find the parameter values that make the observed data most probable.
 In machine learning, we only got the dataset, and we want to find the best model parameters that fit the data. We can use MLE to achieve this by finding the parameter values that maximize the likelihood of the observed data. On the other word, we want to find the model parameters that make the data most likely to be the data in the dataset.
