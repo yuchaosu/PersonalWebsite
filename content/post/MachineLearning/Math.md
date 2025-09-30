@@ -56,11 +56,11 @@ $$ ||\mathbf{x}||_\infty = \max_{1 \leq i \leq n} |x_i| $$
 
 ### Probability
 
-#### Independent events:
+#### Independent events
 $$ P(A \cap B) = P(A)P(B) $$
 $$ P(A \cup B) = P(A) + P(B) - P(A)P(B) $$
 
-#### Conditional Probability:
+#### Conditional Probability
 $$ P(A \cap B) = P(A|B)P(B) = P(B|A)P(A) $$
 $$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
 
@@ -68,13 +68,16 @@ Check if two events are independent:
 $$ P(A|B) = P(A) $$ or
 $$ P(B|A) = P(B) $$
 
-#### Bayes' Theorem:
+#### Bayes' Theorem
 
 - Prior probability vs Posterior probability:
 Prior probability is the initial probability of an event before new evidence is considered. Posterior probability is the updated probability of an event after considering new evidence.
 
 - Full probability formula:
-$$ P(B) = P(A_1)P(B|A_1) + P(A_2)P(B|A_2) + \ldots = \sum_{i} P(B|A_i)P(A_i) $$
+$$\begin{align*}
+P(B) &= P(A_1)P(B|A_1) + P(A_2)P(B|A_2) + \ldots \\
+&= \sum_{i} P(B|A_i)P(A_i)
+\end{align*}$$
 
 - Bayes' Theorem:
 $$ P(A_i|B) = \frac{P(B|A_i)P(A_i)}{P(B)} = \frac{P(B|A_i)P(A_i)}{\sum_{j} P(B|A_j)P(A_j)} $$
