@@ -6,9 +6,8 @@ math: true
 authors:
   - admin
 tags:
-  - Teaching
-  - Vector
   - Thinking
+  - Vector
 image:
   caption: 'Vector'
 ---
