@@ -17,7 +17,7 @@ image:
 
 ## The architecture of NVIDIA GPU
 
-{{< figure src="NVIDIA/overview.jpg" title="NVIDIA GPU Architecture" alt="GPU Architecture" >}}
+{{ $image := .Resources.Get "NVIDIA/overview.jpg" }}
 
 
 GPU is originally designed for graphics rendering. It has a large number of cores that can handle multiple tasks simultaneously, making it ideal for parallel computing. The architecture of NVIDIA GPU consists of several key components:
