@@ -60,3 +60,5 @@ features:
     enable: false
   privacy_pack:
     enable: false
+
+commentable: true
