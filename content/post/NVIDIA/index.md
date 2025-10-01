@@ -64,7 +64,9 @@ Basically, we can consider each CUDA core as a small CPU core, each block contai
 ### CUDA Memory Management
 CUDA provides several APIs for managing memory on the GPU. Developers can allocate and free memory on the GPU using functions like `cudaMalloc()` and `cudaFree()`. Data can be transferred between the host (CPU) and device (GPU) using functions like `cudaMemcpy()`. CUDA also supports unified memory, which allows the CPU and GPU to share a single memory space.
 
-The memory on the GPU is organized into row vectors. Each row vector contains multiple elements, and each element can be accessed using its index. 
+The memory on the GPU is organized into row vectors. Each row vector contains multiple elements, and each element can be accessed using its index. The key to have efficient algorithms on CUDA is to have **coalesced memory access**. This means that threads in a warp should access consecutive memory locations to maximize memory bandwidth. For example, if thread 0 accesses element 0, thread 1 should access element 1, and so on. This allows the GPU to fetch data for all threads in a single memory transaction, improving performance. 
+
+**CUDA is the game to play with thread indexing and memory indexing.**
 
 
 ### CUDA Execution Configuration

@@ -8,12 +8,13 @@ authors:
 tags:
   - Machine Learning
   - Artificial Intelligence
+  - Mathematics
   - Learning
-# image:
-#   caption: 'Tech Equity'
+image:
+  caption: 'Math Foundations'
 ---
 
-## Mathmatical Foundations
+## Mathematical Foundations
 
 ### Gradient
 Assume a function \( f(x_1, x_2, \ldots, x_n) \) with multiple variables. The gradient of this function is a vector that contains all its partial derivatives:
