@@ -11,29 +11,30 @@ tags:
   - CUDA
   - Parallel Computing
   - Learning
-# image:
-#   caption: 'Tech Equity'
+image:
+  caption: 'CUDA'
 ---
 
 ## The architecture of NVIDIA GPU
 
-<img src="overview.jpg" alt="GPU Architecture" title="NVIDIA GPU Architecture" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/overview.jpg" title="NVIDIA GPU Architecture" alt="GPU Architecture" >}}
+
 
 GPU is originally designed for graphics rendering. It has a large number of cores that can handle multiple tasks simultaneously, making it ideal for parallel computing. The architecture of NVIDIA GPU consists of several key components:
 
-<img src="sm.jpeg" alt="GPU Architecture" title="NVIDIA GPU Architecture" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/sm.jpeg" title="NVIDIA GPU Architecture" alt="GPU Architecture" >}}
 
 - **Streaming Multiprocessors (SMs)**: The SM is the core of the GPU. Each SM contains multiple CUDA cores, which are responsible for executing instructions. Each SM has multiple blocks, and each block contains multiple threads. The SM manages the execution of threads and blocks, and it also handles memory access and scheduling. The shared memory and registers are also part of the SM, which are used for fast data access and storage. **Each SM shares one <span style="color:red">shared memory</span> space among its threads. Each block in the SM shares one <span style="color:red">register file</span>.** Proper utilization of these resources is crucial for achieving high performance. The number of SMs in a GPU varies depending on the model. For example, the NVIDIA A100 GPU has 108 SMs, while the NVIDIA RTX 3090 has 82 SMs.
 
-<img src="cudacore.jpg" alt="CUDA Cores" title="NVIDIA CUDA Cores" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/cudacore.jpg" title="NVIDIA CUDA Cores" alt="CUDA Cores" >}}
 
 - **CUDA Cores**: CUDA cores are the basic processing units of the GPU. They are similar to CPU cores but are optimized for parallel processing. Each SM contains multiple CUDA cores, allowing it to execute many threads simultaneously. The CUDA cores are used to be called "stream processors", and the name "CUDA core" was firstly introduced with the Fermi architecture.
 
-<img src="tensorcore.jpg" alt="Tensor Cores" title="NVIDIA Tensor Cores" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/tensorcore.jpg" title="NVIDIA Tensor Cores" alt="Tensor Cores" >}}
 
 - **Tensor Cores**: Tensor Cores are specialized processing units within NVIDIA GPUs designed to accelerate deep learning and matrix operations. They are optimized for performing mixed-precision matrix multiplications and accumulations, which are common in neural network training and inference. Tensor Cores can significantly speed up computations by handling multiple operations in parallel, making them ideal for AI workloads. (Pending Construction)
 
-<img src="memhier.jpg" alt="Memory Hierarchy" title="NVIDIA GPU Memory Hierarchy" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/memhier.jpg" title="NVIDIA GPU Memory Hierarchy" alt="Memory Hierarchy" >}}
 
 - **Memory Hierarchy**: The memory hierarchy of NVIDIA GPU includes several types of memory, each with different access speeds and sizes:
   - **Global Memory**: The largest and slowest memory, accessible by all threads. It is used to store data that needs to be shared among threads.
@@ -45,7 +46,7 @@ Besides these components, NVIDIA GPUs also include other features such as L1 and
 ## CUDA Programming Model
 CUDA is a parallel computing platform and programming model developed by NVIDIA. It allows developers to use NVIDIA GPUs for general-purpose computing. The CUDA programming model consists of several key concepts:
 
-<img src="programmodel.png" alt="CUDA Program Model" title="CUDA Program Model" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/programmodel.png" title="CUDA Program Model" alt="CUDA Program Model" >}}
 
 - **Kernels**: A kernel is a function that is executed on the GPU. It is defined using the `__global__` keyword in CUDA C/C++. When a kernel is launched, it is executed by multiple threads in parallel.
 - **Threads**: A thread is the basic unit of execution in CUDA. Each thread executes a single instance of a kernel. Threads are organized into blocks and grids.
@@ -56,7 +57,7 @@ CUDA is a parallel computing platform and programming model developed by NVIDIA.
 From top to bottom, the hierarchy is: Grid -> Blocks -> Warps -> Threads -> Kernels. (Warp is an execution grouping of threads, not a container above threads)
 
 *The Ampere SM Architecture*
-<img src="amperesm.png" alt="Ampere SM Architecture" title="Ampere SM Architecture" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/amperesm.png" title="Ampere SM Architecture" alt="Ampere SM Architecture" >}}
 
 Basically, we can consider each CUDA core as a small CPU core, each block contains multiple CUDA cores, and each grid contains multiple blocks. The kernel is the function that runs on each CUDA core (thread).
 
@@ -74,7 +75,7 @@ The execution on CUDA is unsynchronized by default. This means that when a kerne
 
 The thread indexing in CUDA is done using built-in variables like `threadIdx`, `blockIdx`, and `blockDim`. These variables allow developers to determine the unique index of each thread within a block and grid, enabling them to access specific data elements in memory. Each thread has its own unique index, which can be calculated using these built-in variables. 
 
-<img src="threadidx.png" alt="Thread Indexing" title="CUDA Thread Indexing" style="max-width: 100%; height: auto;">
+{{< figure src="NVIDIA/threadidx.png" title="CUDA Thread Indexing" alt="Thread Indexing" >}}
 
 `threadIdx`, `blockIdx`, and `blockDim` are Dim3 variables, which means they can be used in 1D, 2D, or 3D configurations. This allows for flexible organization of threads and blocks. Notably, the high dimension indexing is only for logical organization; the actual physical layout is still linear.
 
