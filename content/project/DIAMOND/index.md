@@ -1,5 +1,5 @@
 ---
-title: DIAMOND: Systolic Array Acceleration of Sparse Matrix Multiplication for Quantum Simulation
+title: DIAMOND Systolic Array Acceleration of Sparse Matrix Multiplication for Quantum Simulation
 date: 2025-07-30
 # links:
 #   - type: site
