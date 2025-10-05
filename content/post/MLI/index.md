@@ -1,7 +1,7 @@
 ---
-title: 机器学习（Machine Learning）
+title: 机器学习(一)（Machine Learning I）
 summary: 机器学习基础知识和概念。 Basic knowledge and concepts of machine learning.
-date: 2025-09-30
+date: 2025-10-05
 math: true
 authors:
   - admin

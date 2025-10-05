@@ -1,7 +1,7 @@
 ---
 title: Tenstorrent HPC快速上手指南（The Quick Start Guide to Tenstorrent HPC）
 summary: 简单高效的Tenstorrent上手指南，让你快速理解Tenstorrent， 并使用Tenstorrent进行高性能计算。 A simple and efficient quick start guide to Tenstorrent, helping you quickly understand Tenstorrent and use it for high-performance computing.
-date: 2025-09-30
+date: 2025-10-02
 math: true
 authors:
   - admin
