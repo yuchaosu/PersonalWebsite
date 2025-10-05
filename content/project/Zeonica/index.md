@@ -1,5 +1,5 @@
 ---
-title: Zeonica: Simulator for CGRA
+title: Zeonica Simulator for CGRA
 date: 2025-07-30
 # links:
 #   - type: site
