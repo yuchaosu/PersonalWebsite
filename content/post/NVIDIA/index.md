@@ -17,7 +17,7 @@ image:
 
 ## The architecture of NVIDIA GPU
 
-![NVIDIA GPU Architecture](overview.jpg "NVIDIA GPU Architecture")
+[![NVIDIA GPU Architecture](overview.jpg "NVIDIA GPU Architecture")](overview.jpg)
 
 
 GPU is originally designed for graphics rendering. It has a large number of cores that can handle multiple tasks simultaneously, making it ideal for parallel computing. The architecture of NVIDIA GPU consists of several key components:
@@ -107,3 +107,23 @@ Besides, **the warp size is 32**, which means that 32 threads are executed simul
 
 ## CUDA Divergence
 Divergence occurs when threads within a warp take different execution paths due to conditional statements (e.g., if-else statements). Since all threads in a warp execute the same instruction at the same time, divergence can lead to performance degradation. When threads diverge, the warp must execute each path sequentially, which can result in some threads being idle while others are executing.
+
+## Compute Kernel Design
+When designing compute kernels for CUDA, it is important to consider the following best practices: 
+- **Maximize Parallelism**: Design kernels to maximize the number of threads that can be executed in parallel. This can be achieved by breaking down the problem into smaller tasks that can be executed independently.
+- **Optimize Memory Access**: Ensure that threads access memory in a coalesced manner to maximize memory bandwidth. Use shared memory to store frequently accessed data and minimize global memory accesses.
+- **Minimize Divergence**: Avoid conditional statements that can lead to divergence within a warp. If divergence is unavoidable, try to structure the code to minimize its impact.
+- **Use Appropriate Execution Configuration**: Choose the number of blocks and threads per block based on the specific GPU architecture and the nature of the kernel being executed. Experiment with different configurations to find the optimal settings for a specific application.
+- **Profile and Optimize**: Use profiling tools to analyze the performance of the kernel and identify bottlenecks. Optimize the kernel based on the profiling results to improve performance.
+
+## Tensor Cores
+Tensor Cores are specialized processing units within NVIDIA GPUs designed to accelerate deep learning and matrix operations. They are optimized for performing mixed-precision matrix multiplications and accumulations, which are common in neural network training and inference. Tensor Cores can significantly speed up computations by handling multiple operations in parallel, making them ideal for AI workloads.
+
+## CUDA Libraries
+NVIDIA provides several libraries that can be used to simplify CUDA programming and improve performance. Some of the most commonly used libraries include:
+
+### CUTLASS
+CUTLASS (CUDA Templates for Linear Algebra Subroutines and Solvers) is a collection of CUDA C++ template abstractions for implementing high-performance matrix-multiplication (GEMM) at all levels and scales within CUDA. CUTLASS provides a flexible and efficient way to perform matrix operations on NVIDIA GPUs, making it easier for developers to implement custom algorithms that leverage the power of CUDA.
+
+### cuBLAS
+cuBLAS is a GPU-accelerated library for dense linear algebra that provides a set of basic linear algebra subroutines (BLAS) for CUDA. It is designed to deliver high performance for matrix-matrix and matrix-vector operations on NVIDIA GPUs, making it a popular choice for deep learning and scientific computing applications.
