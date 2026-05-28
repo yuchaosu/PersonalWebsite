@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 苏宇超
+title: Yuchao Su
 
 # Name pronunciation (optional)
 name_pronunciation: Su Yu Chao
 
 # Full name (for SEO)
-first_name: 苏宇超
-last_name: Chao
+first_name: Yuchao
+last_name: Su
 
 # Pronouns (optional)
 pronouns: he/him
