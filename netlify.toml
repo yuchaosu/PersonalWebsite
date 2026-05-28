@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm install && hugo --gc --minify -b $URL && pnpm dlx pagefind --source 'public'"
+  command = "cd QuantumVisualization && npm ci && npx vite build --base=/quantum-viz/ && mkdir -p ../static/quantum-viz && cp -r dist/* ../static/quantum-viz/ && cd .. && pnpm install && hugo --gc --minify -b $URL && pnpm dlx pagefind --source 'public'"
   publish = "public"
   functions = "netlify/functions"
 

@@ -1,0 +1,3 @@
+[submodule "QuantumVisualization"]
+	path = QuantumVisualization
+	url = https://github.com/yuchaosu/QuantumVisualization.git
