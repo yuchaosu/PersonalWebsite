@@ -12,7 +12,6 @@ tags:
 math: true
 ---
 
-This post distills a long series of conversations I had with AI into one coherent narrative. The goal was to truly *understand* quantum computing — not by memorizing gate tables, but by building the math from the ground up and seeing how each piece connects to the next.
 
 We start with the simplest ingredients — complex numbers and vectors — and end with variational quantum algorithms running on today's noisy hardware. Every section depends on the one before it, so I recommend reading in order.
 

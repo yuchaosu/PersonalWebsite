@@ -3,3 +3,8 @@
   margin-left: auto;
   margin-right: auto; /* center it */
 }
+
+/* Widen blog post prose content — scales with viewport */
+.prose {
+  max-width: clamp(65ch, 75vw, 120ch) !important;
+}
