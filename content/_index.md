@@ -116,6 +116,8 @@ sections:
       subtitle: ''
       text: |-
         This site has been viewed {{< views >}} times.
+
+        {{< visitor-map >}}
     design:
       columns: '1'
 

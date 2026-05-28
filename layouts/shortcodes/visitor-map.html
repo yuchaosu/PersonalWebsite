@@ -1,0 +1,73 @@
+<div id="visitor-map-section">
+  <p id="visitor-info" style="text-align:center; margin-bottom:0.75rem; font-size:0.95rem; color:#888;">
+    Loading visitor map&hellip;
+  </p>
+  <div id="visitor-map" style="height:380px; width:100%; border-radius:12px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.12);"></div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+<script>
+(function () {
+  var map = L.map('visitor-map', {
+    zoomControl: true,
+    scrollWheelZoom: false,
+  }).setView([25, 0], 2);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  // Record this visit
+  fetch('/api/visitors', { method: 'POST' }).catch(function () {});
+
+  // Load all visitor locations
+  fetch('/api/visitors')
+    .then(function (r) { return r.json(); })
+    .then(function (locations) {
+      if (!locations || !locations.length) {
+        document.getElementById('visitor-info').textContent = 'No visitor data yet.';
+        return;
+      }
+
+      var totalVisitors = 0;
+      var cluster = L.markerClusterGroup();
+
+      locations.forEach(function (loc) {
+        if (!loc.lat || !loc.lng) return;
+        totalVisitors += loc.count || 1;
+
+        var radius = Math.min(Math.max(Math.sqrt(loc.count || 1) * 5, 6), 40);
+        var circle = L.circleMarker([loc.lat, loc.lng], {
+          radius: radius,
+          fillColor: '#3b82f6',
+          color: '#1e40af',
+          weight: 1.5,
+          opacity: 0.9,
+          fillOpacity: 0.5,
+        });
+
+        var label = '<strong>' + (loc.city || 'Unknown') + ', ' + (loc.country || '') + '</strong>'
+          + '<br>' + (loc.count || 1) + ' visit' + ((loc.count || 1) > 1 ? 's' : '');
+        circle.bindPopup(label);
+
+        cluster.addLayer(circle);
+      });
+
+      map.addLayer(cluster);
+
+      var info = document.getElementById('visitor-info');
+      info.textContent = totalVisitors + ' visit' + (totalVisitors !== 1 ? 's' : '')
+        + ' from ' + locations.length + ' location' + (locations.length !== 1 ? 's' : '')
+        + ' around the world';
+    })
+    .catch(function () {
+      document.getElementById('visitor-info').textContent = 'Could not load visitor data.';
+    });
+})();
+</script>
