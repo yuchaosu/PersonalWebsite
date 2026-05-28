@@ -141,9 +141,7 @@ The states $|+\rangle$ and $|-\rangle$ sit at opposite points on the equator. Th
 
 ### Try it yourself
 
-Use the interactive Bloch sphere below to build intuition. Start at $|0\rangle$ (north pole), apply an $H$ gate to move to the equator, then try $Z$, $S$, $T$ to see how phase rotations work:
-
-{{< quantum-viz >}}
+Use the [interactive Bloch sphere tool](/quantum-viz/) to build intuition. Start at $|0\rangle$ (north pole), apply an $H$ gate to move to the equator, then try $Z$, $S$, $T$ to see how phase rotations work.
 
 ---
 
