@@ -3,7 +3,7 @@
 title: Yuchao Su
 
 # Name pronunciation (optional)
-name_pronunciation: Su Yu Chao
+#name_pronunciation: Su Yu Chao
 
 # Full name (for SEO)
 first_name: Yuchao
