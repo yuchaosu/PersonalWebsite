@@ -186,4 +186,4 @@ awards:
 
 ## About Me
 
-My name is Yuchao Su, a Ph.D. student in Systems Laboratory at [North Carolina State University](https://www.ncsu.edu), advised by [Dr.Frank Mueller](https://arcb.csc.ncsu.edu/~mueller/). Before joining the NCSU, I was fortunate to work with [Prof. Yifan Sun](https://sarchlab.org/syifan) at [College of William & Mary](https://www.wm.edu/), [Prof. Quansheng Yang](https://cse.seu.edu.cn/carl/2019/1126/c26589a296964/page.htm) at [Southeast University](https://www.seu.edu.cn/).
+My name is **Yuchao Su**, and I am a Ph.D. student in the **Systems Laboratory** at [North Carolina State University](https://www.ncsu.edu), advised by [Prof. Frank Mueller](https://arcb.csc.ncsu.edu/~mueller/). At NCSU, I also have the privilege of working closely with [Prof. Jiajia Li](https://fruitfly1026.github.io/). Before joining NCSU, I was fortunate to collaborate with [Prof. Yifan Sun](https://sarchlab.org/syifan) at the [College of William & Mary](https://www.wm.edu/), and with [Prof. Quansheng Yang](https://cse.seu.edu.cn/carl/2019/1126/c26589a296964/page.htm) at [Southeast University](https://www.seu.edu.cn/).

@@ -1,0 +1,5 @@
+.narrow-text {
+  max-width: 1200px;   /* pick a size you like */
+  margin-left: auto;
+  margin-right: auto; /* center it */
+}

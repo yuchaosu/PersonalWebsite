@@ -45,9 +45,11 @@ sections:
 
         
         Please reach out to collaborate 😃
+
         The site is currently under construction~
     design:
-      columns: '1'
+      columns: 3
+      css_class: light
   - block: collection
     id: papers
     content:
